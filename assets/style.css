@@ -1,0 +1,83 @@
+@import url(https://fonts.bunny.net/css?family=fira-code:300,400,500,600,700);
+
+:root {  
+    --bg-colour: #010104;
+    --fg-colour: #eae9fc;
+    --accent-colour: #86b0f1;
+
+    --font-size-h1: 4rem;
+    --font-size-p: 2rem;
+    --font-size-button: 1rem;
+    
+    font-family: 'Fira Code', monospace;
+    background-color: var(--bg-colour);
+    color: var(--fg-colour);
+    font-weight: 400;
+}
+
+/* name */
+h1:has(+ main) {
+    font-weight: 600;
+    font-size: var(--font-size-h1);
+    color: var(--accent-colour);
+    margin-bottom: 0;
+}
+
+/* main block */
+/* setting a margin to be inline with the > */
+h1 + main {
+    font-size: var(--font-size-h1);
+    margin-top: 0;
+    margin-left: calc(2ch);
+}
+
+/* main block */
+/* setting the normal font size */
+/* since we set the font size to that of H1 to get the right padding */
+h1 + main * {
+    font-size: var(--font-size-p);
+    font-weight: 500;
+}
+
+/* button container */
+div:has(a:nth-of-type(2)) {
+    display: flex;
+    gap: 1rem;
+
+    font-family: 'Fira Code', monospace;
+    font-size: var(--font-size-button);
+}
+
+/* button container buttons */
+div:has(a:nth-of-type(2)) button {
+    background-color: var(--bg-colour);
+    color: var(--fg-colour);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+
+    font-family: 'Fira Code', monospace;
+    font-size: var(--font-size-button);
+    font-weight: 500;
+
+    border: 2px solid var(--fg-colour);
+    outline: none;
+}
+
+
+/* button container buttons hovered */
+div:has(a:nth-of-type(2)) button:hover {
+    background-color: var(--fg-colour);
+    color: var(--bg-colour);
+}
+
+/* blog title */
+h2:has(+ div) {
+    font-size: var(--font-size-p);
+    font-weight: 600;
+    color: var(--accent-colour);
+}
+
+/* card */
+h2 + div {
+    
+}

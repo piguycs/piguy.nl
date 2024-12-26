@@ -1,0 +1,28 @@
+[package]
+name = "website"
+version = "0.1.0"
+edition = "2021"
+authors = [ "piguycs <piguycs@pm.me>" ]
+
+description = "My protfolio website"
+repository = "https://github.com/piguycs/piguy.me.git"
+license = "MIT"
+
+[package.metadata.release]
+release = false
+
+# https://github.com/rustwasm/wasm-pack/issues/1247
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+worker = { version = "0.5.0" }
+worker-macros = { version = "0.5.0" }
+console_error_panic_hook = { version = "0.1.7" }
+
+# templating
+maud = { version = "0.26.0", default-features = false }
+comrak = { version = "0.32.0", default-features = false }

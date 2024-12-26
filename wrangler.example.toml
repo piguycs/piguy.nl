@@ -1,0 +1,11 @@
+name = "website"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-12-23"
+
+[build]
+command = "worker-build --release"
+
+[vars]
+GITHUB_URL = "https://github.com/"
+CODEBERG_URL = "https://codeberg.org/"
+LINKEDIN_URL = "https://www.linkedin.com/"
