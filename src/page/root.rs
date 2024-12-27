@@ -1,7 +1,7 @@
 use maud::html;
 use worker::*;
 
-use super::component::{base, blog_listing, into_response};
+use crate::component::{base, blog_listing, into_response};
 
 pub fn portfolio(_req: Request, ctx: RouteContext<()>) -> Result<Response> {
     let github_url = ctx.var("GITHUB_URL").expect("github url not set");
@@ -25,5 +25,7 @@ pub fn portfolio(_req: Request, ctx: RouteContext<()>) -> Result<Response> {
 
     };
 
-    into_response(base("💻 Kunal Dandekar", body))
+    let styles = include_str!("../../assets/style.css");
+
+    into_response(base("💻 Kunal Dandekar", styles, body))
 }

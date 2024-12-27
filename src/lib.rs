@@ -1,12 +1,16 @@
 mod component;
-mod root_handler;
+mod page;
+mod subnetcalc;
 
-use root_handler::portfolio;
 use worker::*;
 
 #[event(fetch)]
 async fn fetch(req: Request, env: Env, _ctx: Context) -> Result<Response> {
     console_error_panic_hook::set_once();
 
-    Router::new().get("/", portfolio).run(req, env).await
+    Router::new()
+        .get("/", page::portfolio)
+        .get("/calc/subnet", page::subnetcalc)
+        .run(req, env)
+        .await
 }
