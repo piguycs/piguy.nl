@@ -1,6 +1,5 @@
 mod component;
 mod page;
-mod subnetcalc;
 
 use worker::*;
 
@@ -10,7 +9,8 @@ async fn fetch(req: Request, env: Env, _ctx: Context) -> Result<Response> {
 
     Router::new()
         .get("/", page::portfolio)
-        .get("/calc/subnet", page::subnetcalc)
+        .get("/calc/subnet", page::calc::subnet)
+        .post("/calc/subnet", page::calc::subnet_post)
         .run(req, env)
         .await
 }

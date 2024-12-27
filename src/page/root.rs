@@ -27,5 +27,5 @@ pub fn portfolio(_req: Request, ctx: RouteContext<()>) -> Result<Response> {
 
     let styles = include_str!("../../assets/style.css");
 
-    into_response(base("💻 Kunal Dandekar", styles, body))
+    into_response(base("💻 Kunal Dandekar", styles, body, false))
 }
