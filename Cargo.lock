@@ -1025,6 +1025,7 @@ dependencies = [
  "comrak",
  "console_error_panic_hook",
  "maud",
+ "serde",
  "worker",
  "worker-macros",
 ]

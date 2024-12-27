@@ -26,3 +26,4 @@ console_error_panic_hook = { version = "0.1.7" }
 # templating
 maud = { version = "0.26.0", default-features = false }
 comrak = { version = "0.32.0", default-features = false }
+serde = "1.0.216"
