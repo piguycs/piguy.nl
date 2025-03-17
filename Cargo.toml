@@ -5,7 +5,7 @@ edition = "2021"
 authors = [ "piguycs <piguycs@pm.me>" ]
 
 description = "My protfolio website"
-repository = "https://github.com/piguycs/piguy.me.git"
+repository = "https://github.com/piguycs/piguy.nl.git"
 license = "MIT"
 
 [package.metadata.release]

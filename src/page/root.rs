@@ -19,7 +19,7 @@ pub fn portfolio(_req: Request, ctx: RouteContext<()>) -> Result<Response> {
             }
             h2 { "Latest blogs" }
             div {
-                (blog_listing("W.I.P."))
+                (blog_listing())
             }
         }
 
