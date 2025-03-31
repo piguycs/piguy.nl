@@ -16,7 +16,9 @@ pub fn base(title: &str, styles: &str, body: Markup, htmx: bool) -> Markup {
 pub fn blog_listing() -> Markup {
     html! {
         div {
-            h3 { "Nothing here yet" }
+            a href="https://kleineos.bearblog.dev/barebones-zig-binary/" target="blank" {
+                "Compiling a barebones zig binary"
+            }
         }
     }
 }

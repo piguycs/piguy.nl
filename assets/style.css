@@ -77,6 +77,14 @@ h2:has(+ div) {
     color: var(--accent-colour);
 }
 
+/* blog title */
+h2:has(+ div) + div a {
+    font-size: var(--font-size-p);
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--accent-colour);
+}
+
 /* card */
 h2 + div {
     
